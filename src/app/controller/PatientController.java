@@ -83,4 +83,11 @@ public class PatientController {
         mv.setAttribute("message", "Patient supprimé.");
         return mv;
     }
+
+    // pour recuperer liste patients en json
+    @UrlMapping(value = "/api/patients", method = "GET")
+    @RestAPI
+    public List<Patient> findAll() throws Exception {
+        return dao.findAllPatients();
+    }
 }

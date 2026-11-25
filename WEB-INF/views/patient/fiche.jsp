@@ -3,6 +3,11 @@
 <head><title>Fiche Patient</title></head>
 <body>
     <h2>Fiche Médicale : ${patient.nom} ${patient.prenom}</h2>
+    <p>
+        <img src="/cdn/patients/${patient.id}/qrcode/${patient.id}-qrcode.jpg" 
+        alt="QR Code ${patient.matricule}" 
+        width="200" height="200">
+    </p>
     <p><strong>Matricule :</strong> ${patient.matricule}</p>
     <p><strong>Date de naissance :</strong> ${patient.dateNaissance}</p>
     <p><strong>Sexe :</strong> ${patient.sexe}</p>
